@@ -1,0 +1,1062 @@
+/* Базовые стили */
+* {
+    box-sizing: border-box;
+}
+
+.page{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    background-color: #FFFFFF;
+    flex: 1; 
+    width: 100%;
+}
+
+.color-changer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #2A254B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+body{
+    margin: 0; /*внешний отступ*/
+    padding: 0; /*внутренний отступ*/
+    width: 100%;
+    font-family: "Outfit", sans-serif;
+    transition: background-color 0.5s ease;
+}
+
+a {
+    text-decoration: none; /*убирает подчеркивание у всех ссылок*/
+    color: #726e8d; /*задает цвет ссылок*/
+}
+
+/*Первый блок*/
+
+.header { /*шапка*/
+    width: 100%; /* ИСПРАВЛЕНО: было 1440px */
+    max-width: 1440px; /* ДОБАВЛЕНО: для ограничения максимальной ширины */
+    height: 132px; /*высота шапки*/
+    margin: 0 auto; /*посередине экрана*/
+    position: relative; /*позиционирует дочерние элементы*/
+}
+
+.header__poisk { /*кнопочка поиска*/
+    width: 16px; /*ширина*/
+    height: 16px; /*высота*/
+    top: 26px; /*отступ сверху*/
+    left: 28px; /*отступ слева*/
+    position: absolute; /*выравнивается все по top и left*/
+}
+
+.header__avatar { /*кнопочка аватара*/
+    top: 26px; /*отступ сверху*/
+    left: 1396px; /*отступ слева*/
+    position: absolute;  /*выравнивается все по top и left*/
+}
+
+.header__shoppimg { /*кнопочка где нарисована тележка*/
+    top: 26px; /*отступ сверху*/
+    left: 1364px; /*отступ слева*/
+    position: absolute; /*выравнивается все по top и left*/
+}
+
+.logo { /*логотип "Avion" */
+    width: 65px; /*ширина*/
+    height: 30px; /*высота*/
+    left: 687px; /*отступ слева*/
+    font-size: 24px; /*размер текста*/
+    text-align: center; /*централизация текста*/
+    position: absolute; /*выравнивается все по top(тут без этого) и left*/
+    font-family: "Spinnaker", sans-serif; /*шрифт, если шрифт не доступен на компе пользователя или не загрузился,
+    то браузер использует любой стандартный шрифт из семейства sans-serif, который есть в системе */
+    font-weight: 400; /*жирность текста*/
+    font-style: normal; /*обычное начертание*/
+}
+
+.header__line { /*линия под меню*/
+    position: absolute; /*выравнивается все по top и left*/
+    top: 70px; /*отступ сверху*/
+    left: 28px; /*отступ слева*/
+}
+
+#menu_line { /*где находятся все 7 гиперссылок*/
+    width: 675px; /*ширина*/
+    height: 22px; /*высота*/
+    top: 90px; /*отступ сверху*/
+    left: 382px; /*отступ слева*/
+    position: absolute; /*выравнивается все по top и left*/
+}
+
+.menu_1 {
+    width: 65px; /*ширина*/
+    height: 22px; /*высота*/
+    font-size: 14px; /*размер текста*/
+    text-align: center; /*централизация текста*/
+    display: inline-block; /*текст будет расположен в 1 линии и не будет переноситься на новую строку(block), но при этом
+    мы можем задать тексту и ширину и высоту, что невозможно для обычных inline-элементов*/
+    font-family: "Outfit", sans-serif; /*выше написано*/
+    font-style: normal; /*обычное начертание(не курсив)*/
+    font-weight: 300;
+}
+
+.menu_2 {
+    width: 64px; /*ширина*/
+    height: 22px; /*высота*/
+    margin-left: 40px; /*отступ слева*/
+    font-size: 14px; /*размер шрифта*/
+    text-align: center; /*централизация текста*/
+    display: inline-block; /*выше написала*/
+    font-family: "Outfit", sans-serif; /*выше написано*/
+    font-style: normal; /*обычное начертание*/
+    font-weight: 300;
+}
+
+.menu_3 {
+    width: 44px; /*ширина*/
+    height: 22px; /*высота*/
+    margin-left: 44px; /*отступ слева*/
+    font-size: 14px; /*размер шрифта*/
+    text-align: center; /*централизация текста*/
+    display: inline-block; /*выше написала*/
+    font-family: "Outfit", sans-serif; /*выше написано*/
+    font-style: normal; /*обычное начертание*/
+    font-weight: 300;
+}
+
+.menu_4 {
+    width: 45px; /*ширина*/
+    height: 22px; /*высота*/
+    margin-left: 44px; /*отступ слева*/
+    font-size: 14px; /*размер шрифта*/
+    text-align: center; /*централизация текста*/
+    display: inline-block; /*выше писала*/
+    font-family: "Outfit", sans-serif; /*выше написано*/
+    font-style: normal; /*обычное начертание*/
+    font-weight: 300;
+}
+
+.menu_5 {
+    width: 64px; /*ширина*/
+    height: 22px; /*высота*/
+    margin-left: 44px; /*отступ слева*/
+    font-size: 14px; /*размер шрифта*/
+    text-align: center; /*централизация текста*/
+    display: inline-block; /*выше писала*/
+    font-family: "Outfit", sans-serif; /*выше написано*/
+    font-style: normal; /*обычное начертание*/
+    font-weight: 300;
+} 
+
+.menu_6 {
+    width: 71px; /*ширина*/
+    height: 22px; /*высота*/
+    margin-left: 40px; /*отступ слева*/
+    font-size: 14px; /*размер шрифта*/
+    text-align: center; /*централизация текста*/
+    display: inline-block; /*выше написала*/
+    font-family: "Outfit", sans-serif; /*выше написано*/
+    font-style: normal; /*обычное начертание*/
+    font-weight: 300;
+}
+
+.menu_7 {
+    width: 51px; /*ширина*/
+    height: 22px; /*высота*/
+    margin-left: 35px; /*отступ слева*/
+    font-size: 14px; /*размер шрифта*/
+    text-align: center; /*централизация текста*/
+    display: inline-block; /*выше написала*/
+    font-family: "Outfit", sans-serif; /*выше написано*/
+    font-style: normal; /*обычное начертание*/
+    font-weight: 300;
+}
+
+/*Второй блок*/
+
+.osnova { /*сам весь 2 блок*/
+    width: 1440px; /*ширина*/
+    height: 704px; /*высота*/
+    margin: 0 auto; /*посередине экрана*/
+}
+
+.info { /*без пелой штуки*/
+    width: 1280px; /*ширина*/
+    height: 584px; /*высота*/
+    top: 60px; /*отступ сверху*/
+    left: 80px; /*отступ слева*/
+    background-color: #2a254b; /*цвет фона блока*/
+    position: relative; /*позиционирует дочерние элементы*/
+}
+
+.main_info {
+    width: 513px; /*ширина*/
+    height: 187px; /*высота*/
+    top: 60px; /*отступ сверху*/
+    left: 60px; /*отступ слева*/
+    position: relative; /*позиционирует дочерние элементы*/
+}
+
+.text_main_info { /*первый текст крупный*/
+    width: 513px; /*ширина*/
+    height: 90px; /*высота*/
+}
+
+.text_info1 { /*сам этот первый текст*/
+    top: 5px; /*отступ сверху*/
+    color: #ffff; /*цвет текста*/
+    font-size: 35px; /*размер шрифта*/
+    
+    position: relative; /*позиционирует дочерние элементы*/
+    font-family: "Montserrat", sans-serif; /*выше написано*/
+    font-weight: 300; /*нормальный вес шрифта*/
+    font-style: normal; /*обычное начертание*/
+}
+
+.bat_main { /*прямоугольник в котором текст*/
+    width: 170px; /*ширина*/
+    height: 56px; /*высота*/
+    top: 131px; /*отступ сверху*/
+    background-color: #494465; /*цвет фона кнопки*/
+    position: absolute; /*выравнивается все по top и left*/
+}
+
+.text_bat { /*сам текст в этой кнопке*/
+    width: 106px; /*ширина*/
+    height: 24px; /*высота*/
+    color: #ffff; /*цвет текста*/
+    font-size: 15px; /*размер шрифта*/
+    left: 32px; /*отступ слева*/
+    top: 18px; /*отступ сверху*/
+    position: absolute; /*выравнивается все по top и left*/
+    text-align: center; /*централизация текста*/
+    vertical-align: middle; /*центрирует текст по вертикали*/
+    font-family: "Outfit", sans-serif; /*выше написано*/
+    font-style: normal; /*обычное начертание*/
+    font-weight: 300;
+}
+
+
+.main_png { /*картинка стула*/
+    width: 520px; /*ширина*/
+    height: 584px; /*высота*/
+    left: 760px; /*отступ слева*/
+    position: absolute; /*выравнивается все по top и left*/
+}
+
+.text_info2 { /*второй текст снизу и поменьше*/
+    width: 602px; /*ширина*/
+    height: 81px; /*высота*/
+    top: 443px; /*отступ сверху*/
+    left: 60px; /*отступ слева*/
+    line-height: 25px; /*высота строки текста*/
+    position: absolute; /*выравнивается все по top и left*/
+    color: #ffff; /*цвет текста*/
+    font-size: 17px; /*размер шрифта*/
+    font-family: "Outfit", sans-serif; /*выше напиано*/
+    font-optical-sizing: auto; /*оптимизация шрифта по ширине*/
+    font-style: normal; /*обычное начертание*/
+    font-weight: 300;
+}
+.bat_main{
+    cursor: pointer;
+}
+.bat_main:active{
+    transform: translateY(1px);
+}
+.text_bat{
+    pointer-events: none;
+}
+
+/* Секция 1 - Преимущества */
+.section1 { /*секция 1*/
+    width: 100%; /* ИСПРАВЛЕНО: было 1440px */
+    max-width: 1440px; /* ДОБАВЛЕНО */
+    height: 355px; /*высота*/
+    margin: 0 auto;
+    position: relative;
+}
+.section1_ogl {    
+    width: 100%;
+    text-align: center;
+}
+.section1_oglav { /*главный текст*/
+    width: 366px; /*ширина*/
+    height: 34px; /*высота*/
+    top: 60px; /*отступ сверху*/
+    margin: 0 auto; /*горизонтально центрирует блочный элемент*/
+    position: absolute; /*выравнивается все по top и left*/
+    color: #2a254b; /*изменение цвета текста*/
+    font-family: 'Spinnaker'; /*изменение шрифта*/
+    font-size: 22px; /*размер шрифта текста*/
+    text-align: center; /*централизация блока*/
+    left: 559px; /*отступ слева*/
+}
+.section1_logo1 { /*блок 1*/ 
+    width: 270px; /*ширина*/
+    height: 124px; /*высота*/
+    position: absolute; /*выравнивается все по top и left*/
+    left: 30px; /*отступ слева*/
+    text-align: center; /*централизация блока*/
+}
+.section1_logoimg1 { /*картинка блока 1*/
+    position: absolute; /*выравнивается все по top и left*/
+    margin: 0 auto; /*горизонтально центрирует блочный элемент*/
+    top: 145px; /*отступ сверху*/
+    width: 24px; /*ширина*/
+    height: 24px; /*высота*/
+    left: 86px; /*отступ слева*/
+}
+.section1_infgl1 { /*главный текст блока 1*/
+    position: absolute; /*выравнивается все по top и left*/
+    font-size: 15px; /*размер шрифта текста*/
+    top: 180px; /*отступ сверху*/
+    font-family: "Outfit"; /*изменение шрифта*/
+    color: #2a254b; /*изменение цвета текста*/
+    left: 70px; /*отступ слева*/
+    width: 170px; /*ширина*/
+    height: 15px; /*высота*/
+}
+.section1_infdop1 { /*дополнительный текст блока 1*/
+    position: absolute; /*выравнивается все по top и left*/
+    font-size: 12px; /*размер шрифта текста*/
+    top: 200px; /*отступ сверху*/
+    color: #2a254b; /*изменение цвета текста*/
+    left: 83px; /*отступ слева*/
+    width: 210px; /*ширина*/
+    height: 48px; /*высота*/
+    font-family: 'Outfit'; /*изменение шрифта*/
+}
+.section1_logo2 { /*блок 2*/
+    width: 270px; /*ширина*/
+    height: 124px; /*высота*/
+    position: absolute; /*выравнивается все по top и left*/
+    left: 30px; /*отступ слева*/
+    text-align: center; /*централизация блока*/
+}
+.section1_logoimg2 { /*картинка блока 2*/
+    position: absolute; /*выравнивается все по top и left*/
+    margin: 0 auto; /*горизонтально центрирует блочный элемент*/
+    top: 145px; /*отступ сверху*/
+    width: 24px; /*ширина*/
+    height: 24px; /*высота*/
+    left: 415px; /*отступ слева*/
+}
+.section1_infgl2 { /*главный текст блока 2*/
+    position: absolute; /*выравнивается все по top и left*/
+    font-size: 15px; /*размер шрифта текста*/
+    top: 180px; /*отступ сверху*/
+    color: #2a254b; /*изменение цвета текста*/
+    left: 405px; /*отступ слева*/
+    width: 170px; /*ширина*/
+    height: 15px; /*высота*/
+    font-family: "Outfit"; /*изменение шрифта*/
+}
+.section1_infdop2 { /*дополнительный текст блока 2*/
+    position: absolute; /*выравнивается все по top и left*/
+    font-size: 12px; /*размер шрифта текста*/
+    top: 210px; /*отступ сверху*/
+    color: #2a254b; /*изменение цвета текста*/
+    left: 418px; /*отступ слева*/
+    width: 220px; /*ширина*/
+    height: 48px; /*высота*/
+    font-family: 'Outfit'; /*изменение шрифта*/
+}
+.section1_logo3 { /*блок 3*/
+    width: 270px; /*ширина*/
+    height: 124px; /*высота*/
+    position: absolute; /*выравнивается все по top и left*/
+    left: 30px; /*отступ слева*/
+    text-align: center; /*централизация блока*/
+}
+.section1_logoimg3 { /*картинка блока 3*/
+    position: absolute; /*выравнивается все по top и left*/
+    margin: 0 auto; /*горизонтально центрирует блочный элемент*/
+    top: 145px; /*отступ сверху*/
+    width: 24px; /*ширина*/
+    height: 24px; /*высота*/
+    left: 739px; /*отступ слева*/
+}
+.section1_infgl3 { /*главный текст блока 3*/
+    position: absolute; /*выравнивается все по top и left*/
+    font-size: 15px; /*размер шрифта текста*/
+    top: 180px; /*отступ сверху*/
+    color: #2a254b; /*изменение цвета текста*/
+    left: 712px; /*отступ слева*/
+    width: 170px; /*ширина*/
+    height: 15px; /*высота*/
+    font-family: "Outfit"; /*изменение шрифта*/
+}
+.section1_infdop3 { /*дополнительный текст блока 3*/
+    position: absolute; /*выравнивается все по top и left*/
+    font-size: 12px; /*размер шрифта текста*/
+    top: 210px; /*отступ сверху*/
+    color: #2a254b; /*изменение цвета текста*/
+    left: 740px; /*отступ слева*/
+    width: 220px; /*ширина*/
+    height: 48px; /*высота*/
+    font-family: 'Outfit'; /*изменение шрифта*/
+}
+.section1_logo4 { /*блок 4*/
+    width: 270px; /*ширина*/
+    height: 124px; /*высота*/
+    position: absolute; /*выравнивается все по top и left*/
+    left: 30px; /*отступ слева*/
+    text-align: center; /*централизация блока*/
+}
+.section1_logoimg4 { /*картинка блока 4*/
+    position: absolute; /*выравнивается все по top и left*/
+    margin: 0 auto; /*горизонтально центрирует блочный элемент*/
+    top: 145px; /*отступ сверху*/
+    width: 24px; /*ширина*/
+    height: 24px; /*высота*/
+    left: 1065px; /*отступ слева*/
+}
+.section1_infgl4 { /*главный текст блока 4*/
+    position: absolute; /*выравнивается все по top и left*/
+    font-size: 15px; /*размер шрифта текста*/
+    top: 180px; /*отступ сверху*/
+    color: #2a254b; /*изменение цвета текста*/
+    left: 1053px; /*отступ слева*/
+    width: 170px; /*ширина*/
+    height: 15px; /*высота*/
+    font-family: "Outfit"; /*изменение шрифта*/
+}
+.section1_infdop4 { /*дополнительный текст блока 4*/
+    position: absolute; /*выравнивается все по top и left*/
+    font-size: 12px; /*размер шрифта текста*/
+    top: 210px; /*отступ сверху*/
+    color: #2a254b; /*изменение цвета текста*/
+    left: 1055px; /*отступ слева*/ 
+    width: 220px; /*ширина*/
+    height: 48px; /*высота*/
+    font-family: 'Outfit'; /*изменение шрифта*/
+}
+
+/* Секция 2 - Новая керамика */
+.section2 { /*секция 2*/
+    width: 1440px; /*фиксированная ширина*/
+    height: 761px; /*фиксированная высота*/
+    margin: 0 auto; /*центрирование по горизонтали*/
+    position: relative; /*относительное позиционирование для дочерних absolute*/
+    background: white; /*цвет фона*/
+}
+
+.section2_ogl { /*обертка для заголовка*/
+    width: 100%; /*ширина на всю секцию*/
+}
+
+.section2_glav { /*главный текст секции 2*/
+    position: absolute; /*абсолютное позиционирование*/
+    width: 215px; /*ширина текстового блока*/
+    height: 40px; /*высота текстового блока*/
+    top: 80px; /*отступ сверху*/
+    left: 100px; /*отступ слева*/
+    font-size: 32px; /*размер шрифта*/
+    font-family: 'Spinnaker'; /*шрифт текста*/
+    margin: 0; /*убираем стандартные отступы*/
+}
+
+.section2_logoimg1 { /*картинка 1 секции 2*/
+    position: absolute; /*абсолютное позиционирование*/
+    width: 305px; /*ширина изображения*/
+    height: 375px; /*высота изображения*/
+    top: 160px; /*отступ сверху*/
+    left: 100px; /*отступ слева*/
+}
+
+.section2_inf1 { /*главная инфа 1 секции 2*/
+    position: absolute; /*абсолютное позиционирование*/
+    font-size: 20px; /*размер шрифта текста*/
+    width: 154px; /*ширина текстового блока*/
+    left: 100px; /*отступ слева*/
+    top: 555px; /*отступ сверху*/
+    height: 28px; /*высота текстового блока*/
+    font-family: 'Cormorant Garamond'; /*шрифт текста*/
+    margin: 0; /*убираем стандартные отступы*/
+}
+
+.section2_price1 { /*ценник 1 секции 2*/
+    position: absolute; /*абсолютное позиционирование*/
+    width: 44px; /*ширина ценника*/
+    height: 27px; /*высота ценника*/
+    top: 585px; /*отступ сверху*/
+    left: 102px; /*отступ слева*/
+    font-family: 'Cormorant Garamond'; /*шрифт текста*/
+    font-size: 22px; /*размер шрифта*/
+    margin: 0; /*убираем стандартные отступы*/
+}
+
+.section2_logoimg2 { /*картинка 2 секции 2*/
+    position: absolute; /*абсолютное позиционирование*/
+    width: 305px; /*ширина изображения*/
+    height: 375px; /*высота изображения*/
+    top: 160px; /*отступ сверху*/
+    left: 425px; /*отступ слева*/
+}
+
+.section2_inf2 { /*главная инфа 2 секции 2*/
+    position: absolute; /*абсолютное позиционирование*/
+    font-size: 20px; /*размер шрифта текста*/
+    width: 154px; /*ширина текстового блока*/
+    left: 425px; /*отступ слева*/
+    top: 555px; /*отступ сверху*/
+    height: 28px; /*высота текстового блока*/
+    font-family: 'Cormorant Garamond'; /*шрифт текста*/
+    margin: 0; /*убираем стандартные отступы*/
+}
+
+.section2_price2 { /*ценник 2 секции 2*/
+    position: absolute; /*абсолютное позиционирование*/
+    width: 44px; /*ширина ценника*/
+    height: 27px; /*высота ценника*/
+    top: 585px; /*отступ сверху*/
+    left: 427px; /*отступ слева*/
+    font-family: 'Cormorant Garamond'; /*шрифт текста*/
+    font-size: 22px; /*размер шрифта*/
+    margin: 0; /*убираем стандартные отступы*/
+}
+
+.section2_logoimg3 { /*картинка 3 секции 2*/
+    position: absolute; /*абсолютное позиционирование*/
+    width: 305px; /*ширина изображения*/
+    height: 375px; /*высота изображения*/
+    top: 160px; /*отступ сверху*/
+    left: 750px; /*отступ слева*/
+}
+
+.section2_inf3 { /*главная инфа 3 секции 2*/
+    position: absolute; /*абсолютное позиционирование*/
+    font-size: 20px; /*размер шрифта текста*/
+    width: 154px; /*ширина текстового блока*/
+    left: 750px; /*отступ слева*/
+    top: 555px; /*отступ сверху*/
+    height: 28px; /*высота текстового блока*/
+    font-family: 'Cormorant Garamond'; /*шрифт текста*/
+    margin: 0; /*убираем стандартные отступы*/
+}
+
+.section2_price3 { /*ценник 3 секции 2*/
+    position: absolute; /*абсолютное позиционирование*/
+    width: 44px; /*ширина ценника*/
+    height: 27px; /*высота ценника*/
+    top: 585px; /*отступ сверху*/
+    left: 752px; /*отступ слева*/
+    font-family: 'Cormorant Garamond'; /*шрифт текста*/
+    font-size: 22px; /*размер шрифта*/
+    margin: 0; /*убираем стандартные отступы*/
+}
+
+.section2_logoimg4 { /*картинка 4 секции 2*/
+    position: absolute; /*абсолютное позиционирование*/
+    width: 305px; /*ширина изображения*/
+    height: 375px; /*высота изображения*/
+    top: 160px; /*отступ сверху*/
+    left: 1075px; /*отступ слева*/
+}
+
+.section2_inf4 { /*главная инфа 4 секции 2*/
+    position: absolute; /*абсолютное позиционирование*/
+    font-size: 20px; /*размер шрифта текста*/
+    width: 154px; /*ширина текстового блока*/
+    left: 1075px; /*отступ слева*/
+    top: 555px; /*отступ сверху*/
+    height: 28px; /*высота текстового блока*/
+    font-family: 'Cormorant Garamond'; /*шрифт текста*/
+    margin: 0; /*убираем стандартные отступы*/
+}
+
+.section2_price4 { /*ценник 4 секции 2*/
+    position: absolute; /*абсолютное позиционирование*/
+    width: 44px; /*ширина ценника*/
+    height: 27px; /*высота ценника*/
+    top: 585px; /*отступ сверху*/
+    left: 1077px; /*отступ слева*/
+    font-family: 'Cormorant Garamond'; /*шрифт текста*/
+    font-size: 22px; /*размер шрифта*/
+    margin: 0; /*убираем стандартные отступы*/
+}
+
+.section2_nav { /*навигация секции 2*/
+    position: absolute; /*абсолютное позиционирование*/
+    width: 100%; /*ширина на всю секцию*/
+    text-align: center; /*выравнивание текста по центру*/
+}
+
+.bat_main { /*кнопка*/
+    position: absolute; /*абсолютное позиционирование*/
+    width: 170px; /*ширина кнопки*/
+    height: 56px; /*высота кнопки*/
+    background-color: #f9f9f9; /*цвет фона кнопки*/
+    top: 650px; /*отступ сверху*/
+    left: 635px; /*отступ слева*/
+    outline: none; /*убирает обводку при фокусе*/
+    border: none; /*убирает границу*/
+    cursor: pointer; /*курсор указатель при наведении*/
+}
+
+.bat_text { /*текст к кнопке*/
+    position: relative; /*относительное позиционирование*/
+    text-decoration: none; /*убирает подчеркивание*/
+    color: black; /*цвет текста*/
+    width: 106px; /*ширина текстового блока*/
+    height: 24px; /*высота текстового блока*/
+    font-size: 13px; /*размер шрифта*/
+    top: 2px; /*смещение сверху*/
+    margin: 0 auto; /*автоматические отступы по бокам*/
+    font-family: 'Open Sans'; /*шрифт текста*/
+    display: block; /*блочное отображение*/
+    line-height: 24px; /*высота строки*/
+}
+/* Секция популярных продуктов */
+.sectaon {
+    width: 100%; /* ИСПРАВЛЕНО: было 1440px */
+    max-width: 1440px; /* ДОБАВЛЕНО */
+    margin: 80px auto;
+    padding: 0 20px;
+    display: block;
+    position: relative;
+}
+
+.sectaon__text1 {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.sectaon__1text {
+    font-size: 36px;
+    color: #2A254B;
+    font-family: "Spinnaker", sans-serif;
+    margin: 0;
+}
+
+.products-grid {
+    display: grid;
+     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.sectaon__text2 {
+    grid-column: 1 / 2;
+}
+
+.sectaon__text3 {
+    grid-column: 2 / 3;
+}
+
+.sectaon__text4 {
+    grid-column: 3 / 4;
+}
+
+.sectaon__divan,
+.sectaon__greenstul,
+.sectaon__sadstul {
+    width: 100%;
+    height: 375px;
+    object-fit: cover;
+    display: block;
+}
+
+.sectaon__2text,
+.sectaon__3text,
+.sectaon__4text {
+    font-size: 20px;
+    margin: 16px 0 8px 0;
+    color: #2A254B;
+    font-family: "Spinnaker", sans-serif;
+    font-weight: normal;
+}
+
+.sectaon__cena1,
+.sectaon__cena2,
+.sectaon__cena3 {
+    font-size: 18px;
+    color: #2A254B;
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    font-weight: normal;
+}
+
+.sectaon__text5 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.sectaon__ssulka4 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 56px;
+    border: 1px solid #2A254B;
+    text-decoration: none;
+    color: #2A254B;
+}
+
+.sectaon__5text {
+    margin: 0;
+    font-size: 16px;
+    color: #2A254B;
+    font-family: "Outfit", sans-serif;
+    font-weight: normal;
+}
+
+/* Секция подписки */
+.sectaone {
+    width: 100%; /* ИСПРАВЛЕНО: было 1440px */
+    max-width: 1440px; /* ДОБАВЛЕНО */
+    margin: 80px auto;
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.sectaone_content {
+    width: 100%;
+    background-color: white;
+    padding: 64px;
+    text-align: center;
+}
+
+.sectaone_text1 {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.sectaone_1text {
+    font-size: 36px;
+    color: #2A254B;
+    margin: 0;
+    font-family: "Spinnaker", sans-serif;
+    font-weight: normal;
+}
+
+.sectaone_text2 {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.sectaone_2text {
+    font-size: 16px;
+    color: #2A254B;
+    margin: 0 auto;
+    max-width: 470px;
+    font-family: "Outfit", sans-serif;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+.subscription-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 472px;
+    margin: 0 auto;
+    height: 56px;
+}
+
+.sectaone_text3 {
+    flex: 1;
+    height: 100%;
+}
+
+.sectaone_3text {
+    width: 100%;
+    height: 100%;
+    padding: 0 32px;
+    background-color: #f9f9f9;
+    border: none;
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    color: #726e8d;
+    box-sizing: border-box;
+}
+
+.sectaone_3text::placeholder {
+    color: #726e8d;
+}
+
+.sectaone_text4 {
+    width: 118px;
+    height: 100%;
+}
+
+.sectaone_4text {
+    width: 100%;
+    height: 100%;
+    background-color: #2A254B;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sectaone_4text:hover {
+    background-color: #3a356b;
+}
+
+/* Секция студии */
+.studio__content {
+    background-color: transparent;
+    width: 100%; /* ИСПРАВЛЕНО: было 1440px */
+    max-width: 1440px; /* ДОБАВЛЕНО */
+    box-sizing: border-box;
+    overflow: hidden;
+    flex: 1;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%; 
+    max-width: 100%;
+    min-height: 603px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+}
+
+.studio__left {
+    flex: 0 0 50%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 72px 84px 54px;
+    box-sizing: border-box;
+}
+
+.image_divan {
+    flex: 0 0 50%;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.stidio__lefttext_24 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    color: #2a254b;
+    font-family: "Spinnaker", sans-serif;
+    margin: 0 0 25px 0;
+}
+
+.stidio__lefttext_16 {
+    color: #505977;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin:0 0  30px 0;
+}
+
+.button__getintouch {
+    padding-block: 16px;
+    padding-inline: 32px 24px;
+    margin: 208px 0 0 0;
+    width: 170px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    background: #f9f9f9;
+    border: none;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    color: #2A254B;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button__getintouch:hover {
+    background: #eaeaea;
+}
+
+/* Футер */
+.footer {
+    width: 100%; /* ИСПРАВЛЕНО: было 1440px */
+    max-width: 1440px; /* ДОБАВЛЕНО */
+    background: #2A254B;
+    color: white;
+    padding: 58px 84px 24px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: auto;
+}
+
+.footer__container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__left {
+    flex: 1;
+}
+
+.footer__nav {
+    display: flex;
+    gap: 100px;
+}
+
+.nav__block h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #FFFFFF;
+    font-family: "Outfit", sans-serif;
+}
+
+.nav__item {
+    margin-bottom: 8px;
+}
+
+.nav__item a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: "Outfit", sans-serif;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.nav__item a:hover {
+    opacity: 1;
+}
+
+.footer__right {
+    margin-bottom: 162px;
+    margin-left: 107px;
+}
+
+.footer__righttext_16 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+    font-family: "Outfit", sans-serif;
+}
+
+.footer__form {
+    display: flex;
+    gap: 0;
+    width: 509px;
+    height: 56px;
+    max-width: 100%; 
+    box-sizing: border-box; 
+}
+
+.form__label {
+    flex: 1;
+}
+
+.input__form {
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input__form::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.button__signup {
+    padding: 0 32px;
+    background-color: #FFFFFF;
+    color: #2A254B;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Outfit", sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button__signup:hover {
+    background-color: #f0f0f0;
+}
+
+.footer__botton {
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #4E4D93;
+    margin-top: 30px;
+}
+
+.copyright {
+    width: auto;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-family: "Outfit", sans-serif;
+    opacity: 0.7;
+    white-space: nowrap;
+}
+
+.footer__social {
+    display: flex;
+    width: auto; 
+    align-items: flex-start;
+    list-style: none;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 24px;
+    height: 24px;
+    margin-left: 0; 
+    cursor: pointer;
+}
+
+/* Общие исправления */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Центрирование секций */
+.section1,
+.section2,
+.sectaon,
+.sectaone,
+.studio__content,
+.footer {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
