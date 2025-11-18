@@ -693,7 +693,7 @@ a {
 .sectaon__text5 {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -1059,4 +1059,5 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: auto;
     margin-right: auto;
     display: block;
+
 }
