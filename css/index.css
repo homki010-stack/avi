@@ -594,7 +594,7 @@ a {
     text-align: center; /*выравнивание текста по центру*/
 }
 
-.bat_main { /*кнопка*/
+.bat2_main { /*кнопка*/
     position: absolute; /*абсолютное позиционирование*/
     width: 170px; /*ширина кнопки*/
     height: 56px; /*высота кнопки*/
@@ -1059,4 +1059,5 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: auto;
     margin-right: auto;
     display: block;
+
 }
