@@ -594,7 +594,7 @@ a {
     text-align: center; /*выравнивание текста по центру*/
 }
 
-.bat2_main { /*кнопка*/
+.bat_main { /*кнопка*/
     position: absolute; /*абсолютное позиционирование*/
     width: 170px; /*ширина кнопки*/
     height: 56px; /*высота кнопки*/
@@ -693,7 +693,7 @@ a {
 .sectaon__text5 {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: 20px;
 }
 
